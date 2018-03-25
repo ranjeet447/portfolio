@@ -181,6 +181,4 @@ window.addEventListener('load', initializeMap);
  });
  // <!-- <script async defer
  //   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZtdCl5hyMJBCE9HgwNejrGcEBd5Br2DE&callback=callback">
- // </script> -->  <!-- <script async defer
- //     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZtdCl5hyMJBCE9HgwNejrGcEBd5Br2DE&callback=callback">
- //   </script> -->
+ // </script> -->
