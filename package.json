@@ -1,0 +1,22 @@
+{
+  "name": "profilepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranjeet447/portfolio.git"
+  },
+  "author": "Ranjeet Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranjeet447/portfolio/issues"
+  },
+  "homepage": "https://github.com/ranjeet447/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

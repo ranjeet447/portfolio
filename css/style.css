@@ -57,7 +57,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding: 10px 5%;
+  padding: 10px;
 
 }
 
@@ -72,7 +72,7 @@ h5 {
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   line-height: 16px;
   float: right;
@@ -156,6 +156,8 @@ ul {
   list-style-type: none;
 }
 
+
+
 .biopic {
   float: left;
   padding: 10px;
@@ -177,15 +179,16 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
   }
-}
+} */
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
+
   }
 }
 
@@ -195,6 +198,7 @@ span {
   }
   .biopic {
     width: 150px;
+    display: block;
   }
   .welcome-message {
     display: none;
