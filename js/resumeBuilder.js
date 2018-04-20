@@ -9,7 +9,8 @@
  	},
  	"bioPic": "images/fry.jpg",
  	"skills":[
- 		"c","c++","java","android app development","Web Developer"
+ 		"c","c++","java","android app development","HTML","Css","Javascript",
+    "Bootstrap","jQuery","NodeJs"
  	]
  };
 
