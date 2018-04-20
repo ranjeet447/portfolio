@@ -81,15 +81,14 @@ $("#header").append(formattedLocation);
 $("#header").append('<br>');
 $("#mapDiv").append(googleMap);
 
-if(bio.skills.length > 0){
-  $("#header").append(HTMLskillsStart);
+
+function addSkills() {
+  $("#skill").append(HTMLskillsStart);
   for(var s=0;s<bio.skills.length;s++){
     var formattedSkill = HTMLskills.replace("%data%",bio.skills[s]);
-    $("#skills").append(formattedSkill);
+    $(".skill-entry:last").append(formattedSkill);
   }
 }
-
-
 function addWork(){
 	for(var job=0; job<work.jobs.length;job++) {
 		$("#workExperience").append(HTMLworkStart);
@@ -165,6 +164,8 @@ function addEducation(){
 addWork();
 addProjects();
 addEducation();
+addSkills();
+$(".skill-entry").css("display", "none");
 document.getElementsByClassName('work-entry')[0].style.display = 'none';
 document.getElementsByClassName('project-entry')[0].style.display = 'none';
 document.getElementsByClassName('education-entry')[0].style.display = 'none';
@@ -172,22 +173,54 @@ document.getElementById('map').style.display = 'none';
 
 
 $(document).ready(function(){
+  $("#headingSkills").click(function(){
+    toggleIcon();
+    $(".work-entry,.project-entry,.education-entry,#map").hide("slow");
+    $(".skill-entry").slideToggle();
+    $("#headingSkills >.material-icons").toggle();
+  });
+});
+$(document).ready(function(){
   $("#headingWorkExperience").click(function(){
-    $(".work-entry").toggle();
+    toggleIcon();
+    $(".skill-entry,.project-entry,.education-entry,#map").hide("slow");
+    $(".work-entry").slideToggle();
+    $("#headingWorkExperience>.material-icons").toggle();
   });
 });
 $(document).ready(function(){
   $("#headingProjects").click(function(){
-    $(".project-entry").toggle();
+    toggleIcon();
+    $(".skill-entry,.work-entry,.education-entry,#map").hide("slow");
+    $(".project-entry").slideToggle();
+    $("#headingProjects > .material-icons").toggle();
   });
 });
 $(document).ready(function(){
   $("#headingEducation").click(function(){
-    $(".education-entry").toggle();
+    toggleIcon();
+    $(".skill-entry,.project-entry,.work-entry,#map").hide("slow");
+    $(".education-entry").slideToggle();
+    $("#headingEducation > .material-icons").toggle();
   });
 });
 $(document).ready(function(){
   $("#headingMap").click(function(){
-    $("#map").toggle();
+    toggleIcon();
+    $(".skill-entry,.project-entry,.education-entry,.work-entry").hide("slow");
+    $("#map").slideToggle();
+    $("#headingMap > .material-icons").toggle();
   });
 });
+function toggleIcon() {
+    if($(".skill-entry").css("display")=="block")
+    $("#headingSkills >.material-icons").toggle();
+    if($(".project-entry").css("display")=="block")
+    $("#headingProjects >.material-icons").toggle();
+    if($(".work-entry").css("display")=="block")
+    $("#headingWorkExperience >.material-icons").toggle();
+    if($(".education-entry").css("display")=="block")
+    $("#headingEducation >.material-icons").toggle();
+    if($("#map").css("display")=="block")
+    $("#headingMap >.material-icons").toggle();
+}

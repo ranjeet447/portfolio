@@ -15,8 +15,8 @@ var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</sp
 var HTMLbioPic = '<img src="%data%" class="biopic" alt="profile picture">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills :</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskillsStart = '<div class="skill-entry"><ul id="skills" class="flex-column"></ul></div>';
+var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -45,25 +45,6 @@ var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a><br><br>';
 
 var googleMap = '<div id="map"></div>';
-
-
-
-//Collecting Click Locations
-var clickLocations = [];
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x,y)
-});
 
 
 

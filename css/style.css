@@ -18,6 +18,7 @@ h6 {
   overflow: auto;
 }
 
+.skill-entry,
 .education-entry,
 .work-entry,
 .project-entry {
@@ -53,12 +54,8 @@ h4 {
   line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5 {
+h2,h3,h4,h5{
   padding: 10px;
-
 }
 
 
@@ -76,7 +73,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -85,7 +81,7 @@ p {
   line-height: 21px;
 }
 
-a {
+a{
   color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
@@ -97,11 +93,6 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
 }
 
 .orange {
@@ -121,6 +112,7 @@ a {
   background-color: #f3f3f3;
   padding-bottom: 10px;
   clear: both;
+  overflow: hidden;
 }
 
 .dark-gray {
@@ -140,6 +132,9 @@ a {
   justify-content: space-around;
   padding: 10px;
 }
+.flex-box h2{
+  float: left;
+}
 
 .flex-column {
   display: flex;
@@ -155,8 +150,6 @@ a {
 ul {
   list-style-type: none;
 }
-
-
 
 .biopic {
   float: left;
@@ -184,6 +177,21 @@ span {
     margin-top: 5%;
   }
 } */
+#headingSkills,
+#headingWorkExperience,
+#headingProjects,
+#headingEducation,
+#headingMap{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  padding: 10px;
+}
+.material-icons{
+  margin-top: 15px
+}
 
 @media only screen and (max-width:900px) {
   .biopic {
