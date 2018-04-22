@@ -5,7 +5,7 @@
  		"email":"ranjeetgupta156@gmail.com",
  		"mobile":"898624018",
  		"github":"ranjeet447",
- 		"location":"Bangalore"
+ 		"location":"Bangalore,India"
  	},
  	"bioPic": "images/fry.jpg",
  	"skills":[
@@ -72,15 +72,14 @@ var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 var picture = HTMLbioPic.replace("%data%",bio.bioPic);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").prepend(picture);
-$("#header").append(formattedEmail);
-$("#header").append(formattedMobile);
-$("#header").append(formattedGithub);
-$("#header").append(formattedLocation);
-$("#header").append('<br>');
-$("#mapDiv").append(googleMap);
+$("#topContacts").prepend(formattedRole);
+$("#topContacts").prepend(formattedName);
+$("#topContacts").prepend(picture);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedGithub);
+$("#topContacts").append(formattedLocation);
+$("#topContacts").append('<br>');
 
 
 function addSkills() {
@@ -145,6 +144,7 @@ function addEducation(){
     var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
     $(".education-entry:last").append(formattedLocation);
   }
+  $(".education-entry:last").append('<br><hr>');
 
   $(".education-entry:last").append(HTMLonlineClasses);
 
@@ -175,47 +175,9 @@ document.getElementById('map').style.display = 'none';
 
 $(document).ready(function(){
   $("#headingSkills").click(function(){
-    toggleIcon();
-    $(".work-entry,.project-entry,.education-entry,#map").hide("slow");
     $(".skill-entry").slideToggle();
     $("#headingSkills >.material-icons").toggle();
-  });
-});
-$(document).ready(function(){
-  $("#headingWorkExperience").click(function(){
-    toggleIcon();
-    $(".skill-entry,.project-entry,.education-entry,#map").hide("slow");
-    $(".work-entry").slideToggle();
-    $("#headingWorkExperience>.material-icons").toggle();
-  });
-});
-$(document).ready(function(){
-  $("#headingProjects").click(function(){
-    toggleIcon();
-    $(".skill-entry,.work-entry,.education-entry,#map").hide("slow");
-    $(".project-entry").slideToggle();
-    $("#headingProjects > .material-icons").toggle();
-  });
-});
-$(document).ready(function(){
-  $("#headingEducation").click(function(){
-    toggleIcon();
-    $(".skill-entry,.project-entry,.work-entry,#map").hide("slow");
-    $(".education-entry").slideToggle();
-    $("#headingEducation > .material-icons").toggle();
-  });
-});
-$(document).ready(function(){
-  $("#headingMap").click(function(){
-    toggleIcon();
-    $(".skill-entry,.project-entry,.education-entry,.work-entry").hide("slow");
-    $("#map").slideToggle();
-    $("#headingMap > .material-icons").toggle();
-  });
-});
-function toggleIcon() {
-    if($(".skill-entry").css("display")=="block")
-    $("#headingSkills >.material-icons").toggle();
+    $(".work-entry,.project-entry,.education-entry,#map").hide("slow");
     if($(".project-entry").css("display")=="block")
     $("#headingProjects >.material-icons").toggle();
     if($(".work-entry").css("display")=="block")
@@ -224,4 +186,65 @@ function toggleIcon() {
     $("#headingEducation >.material-icons").toggle();
     if($("#map").css("display")=="block")
     $("#headingMap >.material-icons").toggle();
-}
+  });
+});
+$(document).ready(function(){
+  $("#headingWorkExperience").click(function(){
+    $(".work-entry").slideToggle();
+    $("#headingWorkExperience>.material-icons").toggle();
+    $(".skill-entry,.project-entry,.education-entry,#map").hide("slow");
+    if($(".skill-entry").css("display")=="block")
+    $("#headingSkills >.material-icons").toggle();
+    if($(".project-entry").css("display")=="block")
+    $("#headingProjects >.material-icons").toggle();
+    if($(".education-entry").css("display")=="block")
+    $("#headingEducation >.material-icons").toggle();
+    if($("#map").css("display")=="block")
+    $("#headingMap >.material-icons").toggle();
+  });
+});
+$(document).ready(function(){
+  $("#headingProjects").click(function(){
+    $(".project-entry").slideToggle();
+    $("#headingProjects > .material-icons").toggle();
+    $(".skill-entry,.work-entry,.education-entry,#map").hide("slow");
+    if($(".skill-entry").css("display")=="block")
+    $("#headingSkills >.material-icons").toggle();
+    if($(".work-entry").css("display")=="block")
+    $("#headingWorkExperience >.material-icons").toggle();
+    if($(".education-entry").css("display")=="block")
+    $("#headingEducation >.material-icons").toggle();
+    if($("#map").css("display")=="block")
+    $("#headingMap >.material-icons").toggle();
+  });
+});
+$(document).ready(function(){
+  $("#headingEducation").click(function(){
+    $(".education-entry").slideToggle();
+    $("#headingEducation > .material-icons").toggle();
+    $(".skill-entry,.project-entry,.work-entry,#map").hide("slow");
+    if($(".skill-entry").css("display")=="block")
+    $("#headingSkills >.material-icons").toggle();
+    if($(".project-entry").css("display")=="block")
+    $("#headingProjects >.material-icons").toggle();
+    if($(".work-entry").css("display")=="block")
+    $("#headingWorkExperience >.material-icons").toggle();
+    if($("#map").css("display")=="block")
+    $("#headingMap >.material-icons").toggle();
+  });
+});
+$(document).ready(function(){
+  $("#headingMap").click(function(){
+    $("#map").slideToggle();
+    $("#headingMap > .material-icons").toggle();
+    $(".skill-entry,.project-entry,.education-entry,.work-entry").hide("slow");
+    if($(".skill-entry").css("display")=="block")
+    $("#headingSkills >.material-icons").toggle();
+    if($(".project-entry").css("display")=="block")
+    $("#headingProjects >.material-icons").toggle();
+    if($(".work-entry").css("display")=="block")
+    $("#headingWorkExperience >.material-icons").toggle();
+    if($(".education-entry").css("display")=="block")
+    $("#headingEducation >.material-icons").toggle();
+  });
+});

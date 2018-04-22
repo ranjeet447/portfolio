@@ -10,55 +10,52 @@
 
   <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAZtdCl5hyMJBCE9HgwNejrGcEBd5Br2DE"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <div id="main">
+  <div id="container">
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
     </div>
-    <div style="clear: both;"></div>
-    <div id="skill" class="gray">
-      <div id="headingSkills">
-        <h2>Skills</h2>
-        <i class="material-icons">keyboard_arrow_down</i>
-        <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+    <div id="topContacts" class="card"></div>
+    <div id="main">
+      <div id="skill" class="card">
+        <div id="headingSkills">
+          <h2>Skills</h2>
+          <i class="material-icons">keyboard_arrow_down</i>
+          <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+        </div>
+      </div>
+      <div id="workExperience"class="card" >
+        <div id="headingWorkExperience">
+          <h2>Work Experience</h2>
+          <i class="material-icons">keyboard_arrow_down</i>
+          <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+        </div>
+      </div>
+      <div id="projects" class="card">
+        <div id="headingProjects" class="flex-box">
+          <h2>Projects</h2>
+          <i class="material-icons">keyboard_arrow_down</i>
+          <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+        </div>
+      </div>
+      <div id="education" class="card">
+        <div id="headingEducation" class="flex-box">
+          <h2>Education</h2>
+          <i class="material-icons">keyboard_arrow_down</i>
+          <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+        </div>
+      </div>
+      <div id="mapDiv" class="card">
+        <div id="headingMap" class="flex-box">
+          <h2>Where I've Worked</h2>
+          <i class="material-icons">keyboard_arrow_down</i>
+          <i class="material-icons" style="display:none">keyboard_arrow_up</i>
+        </div>
+        <div id="map"></div>
       </div>
     </div>
-    <div id="workExperience" >
-      <div id="headingWorkExperience">
-        <h2>Work Experience</h2>
-        <i class="material-icons">keyboard_arrow_down</i>
-        <i class="material-icons" style="display:none">keyboard_arrow_up</i>
-      </div>
-    </div>
-    <div id="projects" class="gray">
-      <div id="headingProjects" class="flex-box">
-        <h2>Projects</h2>
-        <i class="material-icons">keyboard_arrow_down</i>
-        <i class="material-icons" style="display:none">keyboard_arrow_up</i>
-      </div>
-    </div>
-    <div id="education">
-      <div id="headingEducation" class="flex-box">
-        <h2>Education</h2>
-        <i class="material-icons">keyboard_arrow_down</i>
-        <i class="material-icons" style="display:none">keyboard_arrow_up</i>
-      </div>
-    </div>
-    <div id="mapDiv" class="gray">
-      <div id="headingMap" class="flex-box">
-        <h2>Where I've Worked</h2>
-        <i class="material-icons">keyboard_arrow_down</i>
-        <i class="material-icons" style="display:none">keyboard_arrow_up</i>
-      </div>
-    </div>
-    <!-- <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div> -->
   </div>
 
 
@@ -86,6 +83,15 @@
     //   document.getElementById('mapDiv').style.display = 'none';
     // }
   </script>
+  <footer>
+    <p>Find me on social media.</p>
+
+    <a target="_blank" href="https://www.facebook.com" class="fa fa-facebook"></a>
+    <a target="_blank" href="https://www.twitter.com" class="fa fa-twitter"></a>
+    <a target="_blank" href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+    <a target="_blank" href="https://www.youtube.com" class="fa fa-youtube"></a>
+
+  </footer>
 
 </body>
 </html>

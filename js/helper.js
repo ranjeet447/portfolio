@@ -4,15 +4,13 @@ replace the %data% placeholder text.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<br><span>%data%</span><hr>';
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<b><i class="material-icons teal">phone</i><span class="contact-text">%data%</span></b><br>';
+var HTMLemail = '<b><i class="material-icons teal">mail_outline</i><span class="contact-text">%data%</span></b><br>';
+var HTMLtwitter = '<b><i class="material-icons teal">twittr</i><span class="contact-text">%data%</span></b><br>';
+var HTMLgithub = '<b><a href="https://www.github.com/ranjeet447" class="fa fa-github"></a><span class="contact-text">%data%</span></b><br>';
+var HTMLlocation = '<b><i class="material-icons teal">home</i><span class="contact-text">%data%</span></b><br>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic" alt="profile picture">';
+var HTMLbioPic = '<img src="%data%" class="biopic" alt="profile picture"><br>';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<div class="skill-entry"><ul id="skills" class="flex-column"></ul></div>';
@@ -33,7 +31,7 @@ var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div></h3><ul></ul>';
 var HTMLschoolName = '<li><span href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</span></li>';
+var HTMLschoolDegree = ' - %data%</span></li>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
@@ -42,9 +40,7 @@ var HTMLonlineClasses = '</br></br><h3>Online Classes</h3>';
 var HTMLonlineTitle = '<li class="flex-item"><span href="#">%data%';
 var HTMLonlineSchool = ' - %data%</span></li>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a><br><br>';
-
-var googleMap = '<div id="map"></div>';
+var HTMLonlineURL = '<br><a href="#">%data%</a><br>';
 
 
 

@@ -1,5 +1,4 @@
 body,
-div,
 ul,
 li,
 p,
@@ -13,10 +12,50 @@ h6 {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-
-.clear-fix {
-  overflow: auto;
+#container {
+  position: relative;
 }
+
+#header{
+  background-color: #009688;
+  width:100%;
+  height:300px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#topContacts{
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  text-align: left;
+  background-color:white;
+  position: absolute;
+  top: 100px;
+  left: 5%;
+}
+
+#main{
+  background-color: #f3f3f3;
+  margin: 0;
+  padding-top:100px;
+}
+footer{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  background: #009688
+}
+.card{
+  background-color: #ffffff;
+  margin:0px auto;
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 4px 4px 10px grey;
+}
+
 
 .skill-entry,
 .education-entry,
@@ -30,6 +69,8 @@ h1 {
   color: #f5a623;
   line-height: 48px;
   display: inline;
+  padding: 20px;
+
 }
 
 h2 {
@@ -88,40 +129,17 @@ a{
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-.orange {
-  background-color: #f5ae23;
+.green {
+  background-color: #009688;
 }
 
 .orange-text {
   color: #f5ae23;
 }
 
-.white-text {
+.contact-text {
   font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
-  overflow: hidden;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+  color: #999;
 }
 
 .flex-box {
@@ -151,32 +169,11 @@ ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
-img {
-  padding: 10px;
-}
-
 span {
-  padding: 5px;
+  padding: 20px;
 }
 
-#lets-connect {
-  text-align: center;
-}
 
-/* Media queries to handle various device widths */
-
-/* @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-} */
 #headingSkills,
 #headingWorkExperience,
 #headingProjects,
@@ -190,13 +187,29 @@ span {
   padding: 10px;
 }
 .material-icons{
-  margin-top: 15px
+  padding-top:15px
+}
+.material-icons.teal{
+  padding-top: 15px;
+  color: teal;
+}
+.teal{
+  margin-left: 20px;
+  color: teal;
 }
 
+.biopic {
+  padding: 10px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+}
+
+/* Media queries to handle various device widths */
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
-
+    width: auto;
+    height: auto;
   }
 }
 
@@ -206,28 +219,47 @@ span {
   }
   .biopic {
     width: 150px;
-    display: block;
+  align-items:center;
+  justify-content:center;
+  align-self: center;
   }
-  .welcome-message {
-    display: none;
+  #main{
+    padding-top:280px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .biopic {
+    float: left;
+    display: block;
   }
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+  display: flex;
+  height: 500px;
+  margin:0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+  height:auto;
+  width: 0 auto;
+  padding-bottom: %;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+.fa {
+  text-align: center;
+  text-decoration: none;
+  margin:0px 20px;
+
+  color: white;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-github{
+  color:teal;
+  margin-left: 20px;
+  margin-top: 20px;
 }
