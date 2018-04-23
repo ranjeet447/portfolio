@@ -49,7 +49,7 @@ var work = {
 		"employer":"EMPLOYE",
 		"title":"TITLE",
 		"location":"raxaul",
-		"dates":"feb 2016",
+		"dates":"feb 2016-jan 2018",
 		"description":"description for my jobs"
 	}]
 };
@@ -143,8 +143,9 @@ function addEducation(){
     $(".education-entry:last").append(formattedMajor);
     var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
     $(".education-entry:last").append(formattedLocation);
+    $(".education-entry:last").append('<br><hr>');
+
   }
-  $(".education-entry:last").append('<br><hr>');
 
   $(".education-entry:last").append(HTMLonlineClasses);
 
@@ -160,6 +161,8 @@ function addEducation(){
     var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[oc].url);
     var formattedUrl = formattedUrl.replace("#",education.onlineCourses[oc].url);
     $(".education-entry:last").append(formattedUrl);
+    $(".education-entry:last").append('<br><hr>');
+
   }
 }
 addWork();

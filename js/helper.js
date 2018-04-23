@@ -11,10 +11,9 @@ var HTMLgithub = '<b><a href="https://www.github.com/ranjeet447" class="fa fa-gi
 var HTMLlocation = '<b><i class="material-icons teal">home</i><span class="contact-text">%data%</span></b><br>';
 
 var HTMLbioPic = '<img src="%data%" class="biopic" alt="profile picture"><br>';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<div class="skill-entry"><ul id="skills" class="flex-column"></ul></div>';
-var HTMLskills = '<li class="flex-item"><span>%data%</span></li>';
+var HTMLskills = '<li><span>%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -29,7 +28,7 @@ var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
-var HTMLschoolStart = '<div class="education-entry"></div></h3><ul></ul>';
+var HTMLschoolStart = '<div class="education-entry"></div></h3>';
 var HTMLschoolName = '<li><span href="#">%data%';
 var HTMLschoolDegree = ' - %data%</span></li>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
@@ -107,6 +106,8 @@ function initializeMap() {
     map.fitBounds(bounds);
     // center the map
     map.setCenter(bounds.getCenter());
+  //  map.setCenter(pt);
+    map.setZoom(4);
   }
 
   /*

@@ -57,11 +57,34 @@ footer{
 }
 
 
-.skill-entry,
 .education-entry,
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  overflow: hidden;
+}
+.skill-entry li{
+  list-style-type:none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 5%;
+  color: #006988d9;
+}
+.education-entry li{
+    list-style-type:none;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+}
+.education-entry span{
+  padding: 0px;
+  color: #757575;
+}
+.education-entry hr{
+  border: none;
+    height: 1px;
+    color: #eeeeee;
+    background-color: #eeeeee;
 }
 
 h1 {
@@ -99,7 +122,6 @@ h2,h3,h4,h5{
   padding: 10px;
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -114,10 +136,10 @@ h2,h3,h4,h5{
   color: #999;
   line-height: 16px;
   float: right;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 14px;
   color: #333;
   line-height: 21px;
 }
@@ -219,9 +241,13 @@ span {
   }
   .biopic {
     width: 150px;
-  align-items:center;
-  justify-content:center;
-  align-self: center;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+      text-align:center;
+    }
   }
   #main{
     padding-top:280px;
@@ -250,7 +276,7 @@ span {
 .fa {
   text-align: center;
   text-decoration: none;
-  margin:0px 20px;
+  margin:10px 20px;
 
   color: white;
 }
