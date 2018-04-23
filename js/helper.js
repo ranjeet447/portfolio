@@ -50,7 +50,8 @@ var map;  // declares a global map variable
 function initializeMap() {
   var locations;
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    zoom: 4
   };
 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
