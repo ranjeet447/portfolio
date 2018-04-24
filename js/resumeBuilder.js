@@ -7,7 +7,7 @@
  		"github":"ranjeet447",
  		"location":"Bangalore,India"
  	},
- 	"bioPic": "images/fry.jpg",
+ 	"bioPic": "images/image.png",
  	"skills":[
  		"c","c++","java","android app development","HTML","Css","Javascript",
     "Bootstrap","jQuery","NodeJs"
