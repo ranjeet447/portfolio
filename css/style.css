@@ -236,9 +236,6 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
   .biopic {
     width: 150px;
     height: 150px;
@@ -261,17 +258,6 @@ span {
   }
 }
 
-#map {
-  display: flex;
-  height: 500px;
-  margin:0 5%;
-}
-
-#mapDiv {
-  height:auto;
-  width: 0 auto;
-  padding-bottom: %;
-}
 
 .fa {
   text-align: center;

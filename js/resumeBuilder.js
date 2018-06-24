@@ -173,7 +173,6 @@ $(".skill-entry").css("display", "none");
 document.getElementsByClassName('work-entry')[0].style.display = 'none';
 document.getElementsByClassName('project-entry')[0].style.display = 'none';
 document.getElementsByClassName('education-entry')[0].style.display = 'none';
-document.getElementById('map').style.display = 'none';
 
 
 $(document).ready(function(){
@@ -187,8 +186,6 @@ $(document).ready(function(){
     $("#headingWorkExperience >.material-icons").toggle();
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
-    if($("#map").css("display")=="block")
-    $("#headingMap >.material-icons").toggle();
   });
 });
 $(document).ready(function(){
@@ -202,8 +199,6 @@ $(document).ready(function(){
     $("#headingProjects >.material-icons").toggle();
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
-    if($("#map").css("display")=="block")
-    $("#headingMap >.material-icons").toggle();
   });
 });
 $(document).ready(function(){
@@ -217,8 +212,6 @@ $(document).ready(function(){
     $("#headingWorkExperience >.material-icons").toggle();
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
-    if($("#map").css("display")=="block")
-    $("#headingMap >.material-icons").toggle();
   });
 });
 $(document).ready(function(){
@@ -232,8 +225,6 @@ $(document).ready(function(){
     $("#headingProjects >.material-icons").toggle();
     if($(".work-entry").css("display")=="block")
     $("#headingWorkExperience >.material-icons").toggle();
-    if($("#map").css("display")=="block")
-    $("#headingMap >.material-icons").toggle();
   });
 });
 $(document).ready(function(){
@@ -247,7 +238,5 @@ $(document).ready(function(){
     $("#headingProjects >.material-icons").toggle();
     if($(".work-entry").css("display")=="block")
     $("#headingWorkExperience >.material-icons").toggle();
-    if($(".education-entry").css("display")=="block")
-    $("#headingEducation >.material-icons").toggle();
   });
 });
