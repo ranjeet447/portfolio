@@ -1,15 +1,11 @@
-/*
-These are HTML strings.Use JavaScript functions
-replace the %data% placeholder text.
-*/
+
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<br><span>%data%</span><hr>';
-var HTMLmobile = '<b><i class="material-icons teal">phone</i><span class="contact-text">%data%</span></b><br>';
-var HTMLemail = '<b><i class="material-icons teal">mail_outline</i><span class="contact-text">%data%</span></b><br>';
+var HTMLmobile = '<b><a href="tel:8986324018"><i class="material-icons teal">phone</i><span class="contact-text">%data%</span></a></b><br>';
+var HTMLemail = '<b><a href="mailto:ranjeetgupta156@gmail.com"><i class="material-icons teal">mail_outline</i><span class="contact-text">%data%</span></a></b><br>';
 var HTMLtwitter = '<b><i class="material-icons teal">twittr</i><span class="contact-text">%data%</span></b><br>';
-var HTMLgithub = '<b><a href="https://www.github.com/ranjeet447" class="fa fa-github"></a><span class="contact-text">%data%</span></b><br>';
-var HTMLlocation = '<b><i class="material-icons teal">home</i><span class="contact-text">%data%</span></b><br>';
-
+var HTMLgithub = '<b><a target="_block" href="https://www.github.com/ranjeet447" class="fa fa-github"><span class="contact-text">%data%</span></a></b><br>';
+var HTMLlocation = '<b><a target="_blank" href="https://www.google.com/maps/place/12.907086, 77.563252"><i class="material-icons teal">home</i><span class="contact-text">%data%</span></a></b><br>';
 var HTMLbioPic = '<img src="%data%" class="biopic" alt="profile picture"><br>';
 
 var HTMLskillsStart = '<div class="skill-entry"><ul id="skills" class="flex-column"></ul></div>';
@@ -33,13 +29,14 @@ var HTMLschoolName = '<li><span href="#">%data%';
 var HTMLschoolDegree = ' - %data%</span></li>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+var HTMLschoolMajor = '<em><br>Major: %data%</em><br>';
 
 var HTMLonlineClasses = '</br></br><h3>Online Classes</h3>';
 var HTMLonlineTitle = '<li class="flex-item"><span href="#">%data%';
 var HTMLonlineSchool = ' - %data%</span></li>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a><br>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
+var HTMLonlineURL = '<br><a target="_blank" href="#">%data%</a><br>';
+var HTMLonlineCertificates='<div><a target="_blank" href="#"><img src="%data%" class="thumbnail"></img></a></div><br>'
 
 
 

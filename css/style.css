@@ -12,6 +12,12 @@ h6 {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+a,span{
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+}
 #container {
   position: relative;
 }
@@ -32,28 +38,41 @@ h6 {
   text-align: left;
   background-color:white;
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 5%;
+  border-radius: 2px;
 }
 
 #main{
   background-color: #f3f3f3;
   margin: 0;
-  padding-top:100px;
+  padding-top:120px;
 }
 footer{
   margin: 0px;
-  padding: 0px;
+  margin-top: 0px;
+  padding: 20px;
   text-align: center;
   background: #009688
 }
 .card{
   background-color: #ffffff;
-  margin:0px auto;
+  margin:30px auto;
   width: 90%;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  border-radius: 2px;
   box-shadow: 4px 4px 10px grey;
+}
+.card .skill-entry{
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: flex-start;
+  /* justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly; */
+}
+.card:hover{
+  box-shadow: 4px 4px 15px teal;
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
 
@@ -62,14 +81,19 @@ footer{
 .project-entry {
   padding: 0 5%;
   overflow: hidden;
+  display:block;
 }
 .skill-entry li{
-  list-style-type:none;
+  list-style-type:disc;
   font-size: 18px;
   font-weight: bold;
   padding: 10px 5%;
   color: #006988d9;
 }
+.skill-entry li span{
+  margin-left: -30px;
+}
+
 .education-entry li{
     list-style-type:none;
     font-size: 24px;
@@ -85,6 +109,10 @@ footer{
     height: 1px;
     color: #eeeeee;
     background-color: #eeeeee;
+}
+.education-entry .thumbnail{
+  width:20%;
+  height: auto;
 }
 
 h1 {
@@ -187,10 +215,6 @@ a{
   padding: 2.5% 5%;
 }
 
-ul {
-  list-style-type: none;
-}
-
 span {
   padding: 20px;
 }
@@ -209,10 +233,12 @@ span {
   padding: 10px;
 }
 .material-icons{
-  padding-top:15px
+  /* padding-top:15px */
+  padding: 0;
 }
 .material-icons.teal{
-  padding-top: 15px;
+  /* padding-top: 15px; */
+  padding: 0px;
   color: teal;
 }
 .teal{
@@ -221,18 +247,31 @@ span {
 }
 
 .biopic {
-  padding: 10px;
-  width: 240px;
-  height: 240px;
+  padding: 15px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+
 }
+
 
 /* Media queries to handle various device widths */
 @media only screen and (max-width:900px) {
   .biopic {
-    width: auto;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+      text-align:center;
+    }
   }
+  .card{
+    width:90%
+  }
+  #main{padding-top:120px;}
+  .education-entry .thumbnail{width:50%}
 }
 
 @media only screen and (max-width: 750px) {
@@ -246,9 +285,15 @@ span {
       text-align:center;
     }
   }
-  #main{
-    padding-top:280px;
+  .card{
+    width:90%;
+    border-radius: 5px;
   }
+  #main{
+    padding-top:300px;
+  }
+  #topContacts h1{font-size: 25px;}
+  .education-entry .thumbnail{width: 90%}
 }
 
 @media only screen and (min-width: 750px) {
@@ -263,7 +308,6 @@ span {
   text-align: center;
   text-decoration: none;
   margin:10px 20px;
-
   color: white;
 }
 

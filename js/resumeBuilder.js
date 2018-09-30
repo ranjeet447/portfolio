@@ -9,8 +9,7 @@
  	},
  	"bioPic": "images/image.png",
  	"skills":[
- 		"c","c++","java","android app development","HTML","Css","Javascript",
-    "Bootstrap","jQuery","NodeJs"
+ 		"HTML","Css","Javascript","Bootstrap","jQuery","NodeJs","mongoDb","c","c++","Android&nbspApp&nbspDevelopment","Python "
  	]
  };
 
@@ -24,32 +23,35 @@
  	}],
  "onlineCourses":[
   {
-  	"title":"Design And Analysis Of Algorithms",
-  	"school":"NPTEL",
-  	"date":"feb 2018 - apr 2018",
-  	"url":"https://onlinecourses.nptel.ac.in/noc18_cs20"
-  },
-  {
   	"title":"Introduction to Modern Application Developmen",
   	"school":"NPTEL",
   	"date":"feb 2018 - apr 2018",
-  	"url":"https://onlinecourses.nptel.ac.in/noc18_cs03"
+  	"url":"https://onlinecourses.nptel.ac.in/noc18_cs03",
+    "certificate":"/images/IMAD.jpg"
   },
   {
     "title":"Android App Development",
    "school":"Eckovation",
    "date":"july 2017 - nov 2017",
-   "url":"https://eckovation.com/course/android-development"
+   "url":"https://eckovation.com/course/android-development",
+   "certificate":"/images/android.jpg"
+  },
+  {
+  	"title":"Design And Analysis Of Algorithms",
+  	"school":"NPTEL",
+  	"date":"feb 2018 - apr 2018",
+  	"url":"https://onlinecourses.nptel.ac.in/noc18_cs20",
+    "certificate":"/images/DAA.jpg"
   }]
 };
 
 var work = {
 	"jobs":[
 	{
-		"employer":"EMPLOYE",
-		"title":"TITLE",
-		"location":"raxaul",
-		"dates":"feb 2016-jan 2018",
+		"employer":"Verzeo",
+		"title":"Web Development Intern",
+		"location":"Bangalore",
+		"dates":"july 2018 - sept 2018",
 		"description":"description for my jobs"
 	}]
 };
@@ -58,7 +60,7 @@ var projects = {
 	"projects":[
 	{
 		"title":"PROJECT-TITLE",
-		"dates":"some date",
+		"dates":"date",
 		"description":"description about the porject",
 		"images":""
 	}]
@@ -161,7 +163,12 @@ function addEducation(){
     var formattedUrl = HTMLonlineURL.replace("%data%",education.onlineCourses[oc].url);
     var formattedUrl = formattedUrl.replace("#",education.onlineCourses[oc].url);
     $(".education-entry:last").append(formattedUrl);
+
+    var certificate = HTMLonlineCertificates.replace("%data%",education.onlineCourses[oc].certificate);
+    certificate = certificate.replace("#",education.onlineCourses[oc].certificate)
+    $(".education-entry:last").append(certificate);
     $(".education-entry:last").append('<br><hr>');
+
 
   }
 }
@@ -170,16 +177,16 @@ addProjects();
 addEducation();
 addSkills();
 $(".skill-entry").css("display", "none");
-document.getElementsByClassName('work-entry')[0].style.display = 'none';
-document.getElementsByClassName('project-entry')[0].style.display = 'none';
-document.getElementsByClassName('education-entry')[0].style.display = 'none';
+$('.work-entry')[0].style.display = 'none';
+$('.project-entry')[0].style.display = 'none';
+$('.education-entry')[0].style.display = 'none';
 
 
 $(document).ready(function(){
   $("#headingSkills").click(function(){
     $(".skill-entry").slideToggle();
     $("#headingSkills >.material-icons").toggle();
-    $(".work-entry,.project-entry,.education-entry,#map").hide("slow");
+    $(".work-entry,.project-entry,.education-entry").hide("slow");
     if($(".project-entry").css("display")=="block")
     $("#headingProjects >.material-icons").toggle();
     if($(".work-entry").css("display")=="block")
@@ -187,12 +194,11 @@ $(document).ready(function(){
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
   });
-});
-$(document).ready(function(){
+
   $("#headingWorkExperience").click(function(){
     $(".work-entry").slideToggle();
     $("#headingWorkExperience>.material-icons").toggle();
-    $(".skill-entry,.project-entry,.education-entry,#map").hide("slow");
+    $(".skill-entry,.project-entry,.education-entry").hide("slow");
     if($(".skill-entry").css("display")=="block")
     $("#headingSkills >.material-icons").toggle();
     if($(".project-entry").css("display")=="block")
@@ -200,12 +206,11 @@ $(document).ready(function(){
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
   });
-});
-$(document).ready(function(){
+
   $("#headingProjects").click(function(){
     $(".project-entry").slideToggle();
     $("#headingProjects > .material-icons").toggle();
-    $(".skill-entry,.work-entry,.education-entry,#map").hide("slow");
+    $(".skill-entry,.work-entry,.education-entry").hide("slow");
     if($(".skill-entry").css("display")=="block")
     $("#headingSkills >.material-icons").toggle();
     if($(".work-entry").css("display")=="block")
@@ -213,25 +218,11 @@ $(document).ready(function(){
     if($(".education-entry").css("display")=="block")
     $("#headingEducation >.material-icons").toggle();
   });
-});
-$(document).ready(function(){
+
   $("#headingEducation").click(function(){
     $(".education-entry").slideToggle();
     $("#headingEducation > .material-icons").toggle();
-    $(".skill-entry,.project-entry,.work-entry,#map").hide("slow");
-    if($(".skill-entry").css("display")=="block")
-    $("#headingSkills >.material-icons").toggle();
-    if($(".project-entry").css("display")=="block")
-    $("#headingProjects >.material-icons").toggle();
-    if($(".work-entry").css("display")=="block")
-    $("#headingWorkExperience >.material-icons").toggle();
-  });
-});
-$(document).ready(function(){
-  $("#headingMap").click(function(){
-    $("#map").slideToggle();
-    $("#headingMap > .material-icons").toggle();
-    $(".skill-entry,.project-entry,.education-entry,.work-entry").hide("slow");
+    $(".skill-entry,.project-entry,.work-entry").hide("slow");
     if($(".skill-entry").css("display")=="block")
     $("#headingSkills >.material-icons").toggle();
     if($(".project-entry").css("display")=="block")
